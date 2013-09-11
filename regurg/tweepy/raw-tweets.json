@@ -1,0 +1,1020 @@
+{
+    "_max_id": 377925187519266817, 
+    "_since_id": 0, 
+    "completed_in": 0.052, 
+    "py/object": "tweepy.models.SearchResults", 
+    "py/seq": [
+        {
+            "_api": {
+                "api_root": "/1.1", 
+                "auth": {
+                    "_consumer": {
+                        "key": "UX0aRz4tzXcWblxIEVw", 
+                        "py/object": "tweepy.oauth.OAuthConsumer", 
+                        "secret": "QkpBFpTiShmqdWq97Jylam5tB5MadBd4gMcEdNi99I"
+                    }, 
+                    "_sigmethod": {
+                        "py/object": "tweepy.oauth.OAuthSignatureMethod_HMAC_SHA1"
+                    }, 
+                    "access_token": {
+                        "key": "596973714-NMVzVGYpN6aq6vSeM8Cu24tqC5pQT97TuzAppSEF", 
+                        "py/object": "tweepy.oauth.OAuthToken", 
+                        "secret": "LFiFeN4TsHPtkOeekurvrFaZogAkzgAFdkHu2kKxIM"
+                    }, 
+                    "callback": null, 
+                    "py/object": "tweepy.auth.OAuthHandler", 
+                    "request_token": null, 
+                    "secure": false, 
+                    "username": null
+                }, 
+                "cache": null, 
+                "compression": false, 
+                "host": "api.twitter.com", 
+                "last_response": {
+                    "_method": "GET", 
+                    "chunk_left": "UNKNOWN", 
+                    "chunked": 0, 
+                    "debuglevel": 0, 
+                    "fp": null, 
+                    "length": 0, 
+                    "msg": {
+                        "dict": {
+                            "cache-control": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0", 
+                            "content-length": "15786", 
+                            "content-type": "application/json;charset=utf-8", 
+                            "date": "Wed, 11 Sep 2013 23:42:41 GMT", 
+                            "expires": "Tue, 31 Mar 1981 05:00:00 GMT", 
+                            "last-modified": "Wed, 11 Sep 2013 23:42:41 GMT", 
+                            "pragma": "no-cache", 
+                            "server": "tfe", 
+                            "set-cookie": "lang=en, guest_id=v1%3A137894296143632116; Domain=.twitter.com; Path=/; Expires=Fri, 11-Sep-2015 23:42:41 UTC", 
+                            "status": "200 OK", 
+                            "strict-transport-security": "max-age=631138519", 
+                            "x-access-level": "read", 
+                            "x-frame-options": "SAMEORIGIN", 
+                            "x-rate-limit-limit": "180", 
+                            "x-rate-limit-remaining": "169", 
+                            "x-rate-limit-reset": "1378943302", 
+                            "x-transaction": "316323384de7aa76"
+                        }, 
+                        "encodingheader": null, 
+                        "fp": null, 
+                        "headers": [
+                            "cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0\r\n", 
+                            "content-length: 15786\r\n", 
+                            "content-type: application/json;charset=utf-8\r\n", 
+                            "date: Wed, 11 Sep 2013 23:42:41 GMT\r\n", 
+                            "expires: Tue, 31 Mar 1981 05:00:00 GMT\r\n", 
+                            "last-modified: Wed, 11 Sep 2013 23:42:41 GMT\r\n", 
+                            "pragma: no-cache\r\n", 
+                            "server: tfe\r\n", 
+                            "set-cookie: lang=en\r\n", 
+                            "set-cookie: guest_id=v1%3A137894296143632116; Domain=.twitter.com; Path=/; Expires=Fri, 11-Sep-2015 23:42:41 UTC\r\n", 
+                            "status: 200 OK\r\n", 
+                            "strict-transport-security: max-age=631138519\r\n", 
+                            "x-access-level: read\r\n", 
+                            "x-frame-options: SAMEORIGIN\r\n", 
+                            "x-rate-limit-limit: 180\r\n", 
+                            "x-rate-limit-remaining: 169\r\n", 
+                            "x-rate-limit-reset: 1378943302\r\n", 
+                            "x-transaction: 316323384de7aa76\r\n"
+                        ], 
+                        "maintype": "application", 
+                        "plist": [
+                            "charset=utf-8"
+                        ], 
+                        "plisttext": ";charset=utf-8", 
+                        "py/object": "httplib.HTTPMessage", 
+                        "seekable": 0, 
+                        "startofbody": null, 
+                        "startofheaders": null, 
+                        "status": "", 
+                        "subtype": "json", 
+                        "type": "application/json", 
+                        "typeheader": "application/json;charset=utf-8", 
+                        "unixfrom": ""
+                    }, 
+                    "py/object": "httplib.HTTPResponse", 
+                    "reason": "OK", 
+                    "status": 200, 
+                    "strict": 0, 
+                    "version": 11, 
+                    "will_close": false
+                }, 
+                "parser": {
+                    "json_lib": {
+                        "py/repr": "json/json"
+                    }, 
+                    "model_factory": {
+                        "py/type": "tweepy.models.ModelFactory"
+                    }, 
+                    "py/object": "tweepy.parsers.ModelParser"
+                }, 
+                "py/object": "tweepy.api.API", 
+                "retry_count": 0, 
+                "retry_delay": 0, 
+                "retry_errors": null, 
+                "search_host": "search.twitter.com", 
+                "search_root": "", 
+                "secure": true, 
+                "timeout": 60
+            }, 
+            "author": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "contributors_enabled": false, 
+                "created_at": {
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        }, 
+                        [
+                            "B9wGARcWOAAAAA=="
+                        ]
+                    ], 
+                    "py/object": "datetime.datetime"
+                }, 
+                "default_profile": false, 
+                "default_profile_image": false, 
+                "description": "Electrical Engineering + CS @OlinCollege. CS / NLP Student Researcher @MITLL. Technical Associate @StartupInst. From a social experiment called #Reston", 
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }, 
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "juliana.io", 
+                                "expanded_url": "http://juliana.io", 
+                                "indices": [
+                                    0, 
+                                    22
+                                ], 
+                                "url": "http://t.co/xVnTcZczmq"
+                            }
+                        ]
+                    }
+                }, 
+                "favourites_count": 495, 
+                "follow_request_sent": false, 
+                "followers_count": 299, 
+                "following": false, 
+                "friends_count": 403, 
+                "geo_enabled": true, 
+                "id": 596973714, 
+                "id_str": "596973714", 
+                "is_translator": false, 
+                "lang": "en", 
+                "listed_count": 12, 
+                "location": "Cambridge, MA", 
+                "name": "Juliana Nazar\u00e9", 
+                "notifications": false, 
+                "profile_background_color": "ACDED6", 
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif", 
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif", 
+                "profile_background_tile": false, 
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/596973714/1355185889", 
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000303131818/c6dfcb909634083db4d3b15a0ad6c5da_normal.jpeg", 
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000303131818/c6dfcb909634083db4d3b15a0ad6c5da_normal.jpeg", 
+                "profile_link_color": "038543", 
+                "profile_sidebar_border_color": "EEEEEE", 
+                "profile_sidebar_fill_color": "F6F6F6", 
+                "profile_text_color": "333333", 
+                "profile_use_background_image": true, 
+                "protected": false, 
+                "py/object": "tweepy.models.User", 
+                "screen_name": "JulianaNazare", 
+                "statuses_count": 817, 
+                "time_zone": "Eastern Time (US & Canada)", 
+                "url": "http://t.co/xVnTcZczmq", 
+                "utc_offset": -14400, 
+                "verified": false
+            }, 
+            "contributors": null, 
+            "coordinates": null, 
+            "created_at": {
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.datetime"
+                    }, 
+                    [
+                        "B90JCxYqKAAAAA=="
+                    ]
+                ], 
+                "py/object": "datetime.datetime"
+            }, 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            8, 
+                            20
+                        ], 
+                        "text": "regurgitate"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": []
+            }, 
+            "favorite_count": 1, 
+            "favorited": false, 
+            "geo": null, 
+            "id": 377925187519266817, 
+            "id_str": "377925187519266817", 
+            "in_reply_to_screen_name": null, 
+            "in_reply_to_status_id": null, 
+            "in_reply_to_status_id_str": null, 
+            "in_reply_to_user_id": null, 
+            "in_reply_to_user_id_str": null, 
+            "lang": "en", 
+            "metadata": {
+                "iso_language_code": "en", 
+                "result_type": "recent"
+            }, 
+            "place": null, 
+            "py/object": "tweepy.models.Status", 
+            "retweet_count": 0, 
+            "retweeted": false, 
+            "source": "web", 
+            "source_url": null, 
+            "text": "testing #regurgitate for SCOPE", 
+            "truncated": false, 
+            "user": {
+                "py/id": 13
+            }
+        }, 
+        {
+            "_api": {
+                "py/id": 2
+            }, 
+            "author": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "contributors_enabled": false, 
+                "created_at": {
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        }, 
+                        [
+                            "B9sCCA0cBgAAAA=="
+                        ]
+                    ], 
+                    "py/object": "datetime.datetime"
+                }, 
+                "default_profile": false, 
+                "default_profile_image": false, 
+                "description": "Yellow-bone since B.C. \u2022|\u2022 Tree hugger \u2022|\u2022 Omniscient \u2022|\u2022 Instagram: Boosh_TheDreamer \u2022|\u2022 #Beezus", 
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }, 
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "l-i-t-w.tumblr.com", 
+                                "expanded_url": "http://www.l-i-t-w.tumblr.com", 
+                                "indices": [
+                                    0, 
+                                    22
+                                ], 
+                                "url": "http://t.co/dCJ2jZr0yt"
+                            }
+                        ]
+                    }
+                }, 
+                "favourites_count": 55, 
+                "follow_request_sent": false, 
+                "followers_count": 497, 
+                "following": false, 
+                "friends_count": 381, 
+                "geo_enabled": true, 
+                "id": 249145964, 
+                "id_str": "249145964", 
+                "is_translator": false, 
+                "lang": "en", 
+                "listed_count": 1, 
+                "location": "Skating on cirrus clouds...", 
+                "name": "Buhle Seya", 
+                "notifications": false, 
+                "profile_background_color": "D9D9D9", 
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/825052038/f2fca0bf665ec59d080e9348177e2bb7.jpeg", 
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/825052038/f2fca0bf665ec59d080e9348177e2bb7.jpeg", 
+                "profile_background_tile": true, 
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/249145964/1378757994", 
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000421022315/3625dd35a31c9e40dd9629927ecc7fca_normal.jpeg", 
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000421022315/3625dd35a31c9e40dd9629927ecc7fca_normal.jpeg", 
+                "profile_link_color": "4F565E", 
+                "profile_sidebar_border_color": "FFFFFF", 
+                "profile_sidebar_fill_color": "B1AFB2", 
+                "profile_text_color": "0D2A4C", 
+                "profile_use_background_image": true, 
+                "protected": false, 
+                "py/object": "tweepy.models.User", 
+                "screen_name": "B_TheDreamer", 
+                "statuses_count": 24665, 
+                "time_zone": "Pretoria", 
+                "url": "http://t.co/dCJ2jZr0yt", 
+                "utc_offset": 7200, 
+                "verified": false
+            }, 
+            "contributors": null, 
+            "coordinates": null, 
+            "created_at": {
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.datetime"
+                    }, 
+                    [
+                        "B90JCxEKCQAAAA=="
+                    ]
+                ], 
+                "py/object": "datetime.datetime"
+            }, 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            105, 
+                            119
+                        ], 
+                        "text": "TheDifference"
+                    }, 
+                    {
+                        "indices": [
+                            120, 
+                            132
+                        ], 
+                        "text": "Regurgitate"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": []
+            }, 
+            "favorite_count": 0, 
+            "favorited": false, 
+            "geo": null, 
+            "id": 377841507098566656, 
+            "id_str": "377841507098566656", 
+            "in_reply_to_screen_name": null, 
+            "in_reply_to_status_id": null, 
+            "in_reply_to_status_id_str": null, 
+            "in_reply_to_user_id": null, 
+            "in_reply_to_user_id_str": null, 
+            "lang": "en", 
+            "metadata": {
+                "iso_language_code": "en", 
+                "result_type": "recent"
+            }, 
+            "place": null, 
+            "py/object": "tweepy.models.Status", 
+            "retweet_count": 0, 
+            "retweeted": false, 
+            "source": "web", 
+            "source_url": null, 
+            "text": "'Your like, that taste that a slaughtered chicken has, opposed to the one bought in store...once cooked' #TheDifference #Regurgitate", 
+            "truncated": false, 
+            "user": {
+                "py/id": 27
+            }
+        }, 
+        {
+            "_api": {
+                "py/id": 2
+            }, 
+            "author": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "contributors_enabled": false, 
+                "created_at": {
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        }, 
+                        [
+                            "B9oHFQQfOgAAAA=="
+                        ]
+                    ], 
+                    "py/object": "datetime.datetime"
+                }, 
+                "default_profile": true, 
+                "default_profile_image": false, 
+                "description": "Smeller of fine things", 
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                }, 
+                "favourites_count": 40, 
+                "follow_request_sent": false, 
+                "followers_count": 32, 
+                "following": false, 
+                "friends_count": 212, 
+                "geo_enabled": true, 
+                "id": 168946289, 
+                "id_str": "168946289", 
+                "is_translator": false, 
+                "lang": "en", 
+                "listed_count": 0, 
+                "location": "Corpus tex ass", 
+                "name": "Scott", 
+                "notifications": false, 
+                "profile_background_color": "C0DEED", 
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
+                "profile_background_tile": false, 
+                "profile_image_url": "http://a0.twimg.com/profile_images/3683960516/52b6a5f115f02fe0287c3e243648937b_normal.jpeg", 
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/3683960516/52b6a5f115f02fe0287c3e243648937b_normal.jpeg", 
+                "profile_link_color": "0084B4", 
+                "profile_sidebar_border_color": "C0DEED", 
+                "profile_sidebar_fill_color": "DDEEF6", 
+                "profile_text_color": "333333", 
+                "profile_use_background_image": true, 
+                "protected": false, 
+                "py/object": "tweepy.models.User", 
+                "screen_name": "scottekarate", 
+                "statuses_count": 774, 
+                "time_zone": null, 
+                "url": null, 
+                "utc_offset": null, 
+                "verified": false
+            }, 
+            "contributors": null, 
+            "coordinates": null, 
+            "created_at": {
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.datetime"
+                    }, 
+                    [
+                        "B90JCRAlAgAAAA=="
+                    ]
+                ], 
+                "py/object": "datetime.datetime"
+            }, 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            8, 
+                            20
+                        ], 
+                        "text": "regurgitate"
+                    }, 
+                    {
+                        "indices": [
+                            60, 
+                            67
+                        ], 
+                        "text": "better"
+                    }, 
+                    {
+                        "indices": [
+                            68, 
+                            80
+                        ], 
+                        "text": "MightyWings"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": []
+            }, 
+            "favorite_count": 0, 
+            "favorited": false, 
+            "geo": null, 
+            "id": 377108395859247104, 
+            "id_str": "377108395859247104", 
+            "in_reply_to_screen_name": null, 
+            "in_reply_to_status_id": null, 
+            "in_reply_to_status_id_str": null, 
+            "in_reply_to_user_id": null, 
+            "in_reply_to_user_id_str": null, 
+            "lang": "en", 
+            "metadata": {
+                "iso_language_code": "en", 
+                "result_type": "recent"
+            }, 
+            "place": null, 
+            "py/object": "tweepy.models.Status", 
+            "retweet_count": 0, 
+            "retweeted": false, 
+            "source": "Twitter for Android", 
+            "source_url": "http://twitter.com/download/android", 
+            "text": "You can #regurgitate them and eat them again. They'll taste #better #MightyWings", 
+            "truncated": false, 
+            "user": {
+                "py/id": 42
+            }
+        }, 
+        {
+            "_api": {
+                "py/id": 2
+            }, 
+            "author": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "contributors_enabled": false, 
+                "created_at": {
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        }, 
+                        [
+                            "B9wCCQIjCwAAAA=="
+                        ]
+                    ], 
+                    "py/object": "datetime.datetime"
+                }, 
+                "default_profile": false, 
+                "default_profile_image": false, 
+                "description": "My subconscious brain is controlling me, and I can't help it!", 
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                }, 
+                "favourites_count": 2448, 
+                "follow_request_sent": false, 
+                "followers_count": 369, 
+                "following": false, 
+                "friends_count": 527, 
+                "geo_enabled": true, 
+                "id": 487168474, 
+                "id_str": "487168474", 
+                "is_translator": false, 
+                "lang": "en", 
+                "listed_count": 4, 
+                "location": "39.389240, -105.826809", 
+                "name": "Ked 47", 
+                "notifications": false, 
+                "profile_background_color": "C0DEED", 
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/420979258/TW-03.gif", 
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/420979258/TW-03.gif", 
+                "profile_background_tile": false, 
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/487168474/1354110986", 
+                "profile_image_url": "http://a0.twimg.com/profile_images/3738875612/a6f18317339524fb5c624c70f53255ea_normal.jpeg", 
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/3738875612/a6f18317339524fb5c624c70f53255ea_normal.jpeg", 
+                "profile_link_color": "0084B4", 
+                "profile_sidebar_border_color": "C0DEED", 
+                "profile_sidebar_fill_color": "DDEEF6", 
+                "profile_text_color": "333333", 
+                "profile_use_background_image": true, 
+                "protected": false, 
+                "py/object": "tweepy.models.User", 
+                "screen_name": "Subscatter", 
+                "statuses_count": 12159, 
+                "time_zone": "Central Time (US & Canada)", 
+                "url": null, 
+                "utc_offset": -18000, 
+                "verified": false
+            }, 
+            "contributors": null, 
+            "coordinates": {
+                "coordinates": [
+                    -104.98109959, 
+                    39.74716669
+                ], 
+                "type": "Point"
+            }, 
+            "created_at": {
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.datetime"
+                    }, 
+                    [
+                        "B90JCAQUDgAAAA=="
+                    ]
+                ], 
+                "py/object": "datetime.datetime"
+            }, 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            72, 
+                            84
+                        ], 
+                        "text": "Regurgitate"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": []
+            }, 
+            "favorite_count": 0, 
+            "favorited": false, 
+            "geo": {
+                "coordinates": [
+                    39.74716669, 
+                    -104.98109959
+                ], 
+                "type": "Point"
+            }, 
+            "id": 376560586806407168, 
+            "id_str": "376560586806407168", 
+            "in_reply_to_screen_name": null, 
+            "in_reply_to_status_id": null, 
+            "in_reply_to_status_id_str": null, 
+            "in_reply_to_user_id": null, 
+            "in_reply_to_user_id_str": null, 
+            "lang": "en", 
+            "metadata": {
+                "iso_language_code": "en", 
+                "result_type": "recent"
+            }, 
+            "place": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "attributes": {}, 
+                "bounding_box": {
+                    "_api": {
+                        "py/id": 2
+                    }, 
+                    "coordinates": [
+                        [
+                            [
+                                -105.109927, 
+                                39.614337
+                            ], 
+                            [
+                                -104.600302, 
+                                39.614337
+                            ], 
+                            [
+                                -104.600302, 
+                                39.914247
+                            ], 
+                            [
+                                -105.109927, 
+                                39.914247
+                            ]
+                        ]
+                    ], 
+                    "py/object": "tweepy.models.BoundingBox", 
+                    "type": "Polygon"
+                }, 
+                "country": "United States", 
+                "country_code": "US", 
+                "full_name": "Denver, CO", 
+                "id": "b49b3053b5c25bf5", 
+                "name": "Denver", 
+                "place_type": "city", 
+                "py/object": "tweepy.models.Place", 
+                "url": "https://api.twitter.com/1.1/geo/id/b49b3053b5c25bf5.json"
+            }, 
+            "py/object": "tweepy.models.Status", 
+            "retweet_count": 0, 
+            "retweeted": false, 
+            "source": "Twitter for iPhone", 
+            "source_url": "http://twitter.com/download/iphone", 
+            "text": "Seriously, at least address the differences - this one hat shit is old. #Regurgitate", 
+            "truncated": false, 
+            "user": {
+                "py/id": 56
+            }
+        }, 
+        {
+            "_api": {
+                "py/id": 2
+            }, 
+            "author": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "contributors_enabled": false, 
+                "created_at": {
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        }, 
+                        [
+                            "B9kDAwETAQAAAA=="
+                        ]
+                    ], 
+                    "py/object": "datetime.datetime"
+                }, 
+                "default_profile": false, 
+                "default_profile_image": false, 
+                "description": "Common Sense Specialist. I smell pretty & take myself far too seriously. This account sometimes moderated by @lcrjes. Parlo Italiano y comprendo Espa\u00f1ol tambien", 
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                }, 
+                "favourites_count": 786, 
+                "follow_request_sent": false, 
+                "followers_count": 314, 
+                "following": false, 
+                "friends_count": 332, 
+                "geo_enabled": true, 
+                "id": 22594116, 
+                "id_str": "22594116", 
+                "is_translator": false, 
+                "lang": "en", 
+                "listed_count": 5, 
+                "location": "Iowa City", 
+                "name": "Zac.Arellano.", 
+                "notifications": false, 
+                "profile_background_color": "022330", 
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png", 
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png", 
+                "profile_background_tile": false, 
+                "profile_image_url": "http://a0.twimg.com/profile_images/3605900017/5b11d8c549c1d54dd30e3a855223f8f5_normal.jpeg", 
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/3605900017/5b11d8c549c1d54dd30e3a855223f8f5_normal.jpeg", 
+                "profile_link_color": "0084B4", 
+                "profile_sidebar_border_color": "A8C7F7", 
+                "profile_sidebar_fill_color": "C0DFEC", 
+                "profile_text_color": "333333", 
+                "profile_use_background_image": false, 
+                "protected": false, 
+                "py/object": "tweepy.models.User", 
+                "screen_name": "zacpaul", 
+                "statuses_count": 14655, 
+                "time_zone": "Mountain Time (US & Canada)", 
+                "url": null, 
+                "utc_offset": -21600, 
+                "verified": false
+            }, 
+            "contributors": null, 
+            "coordinates": {
+                "coordinates": [
+                    -91.5349466, 
+                    41.6670973
+                ], 
+                "type": "Point"
+            }, 
+            "created_at": {
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.datetime"
+                    }, 
+                    [
+                        "B90JBwYwHgAAAA=="
+                    ]
+                ], 
+                "py/object": "datetime.datetime"
+            }, 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            12, 
+                            21
+                        ], 
+                        "text": "visitate"
+                    }, 
+                    {
+                        "indices": [
+                            22, 
+                            34
+                        ], 
+                        "text": "regurgitate"
+                    }, 
+                    {
+                        "indices": [
+                            35, 
+                            44
+                        ], 
+                        "text": "masturb8"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": [
+                    {
+                        "id": 134262171, 
+                        "id_str": "134262171", 
+                        "indices": [
+                            0, 
+                            11
+                        ], 
+                        "name": "Nolan Petersen", 
+                        "screen_name": "NolansMLIA"
+                    }
+                ]
+            }, 
+            "favorite_count": 0, 
+            "favorited": false, 
+            "geo": {
+                "coordinates": [
+                    41.6670973, 
+                    -91.5349466
+                ], 
+                "type": "Point"
+            }, 
+            "id": 376235510446182400, 
+            "id_str": "376235510446182400", 
+            "in_reply_to_screen_name": "NolansMLIA", 
+            "in_reply_to_status_id": 376235170912669696, 
+            "in_reply_to_status_id_str": "376235170912669696", 
+            "in_reply_to_user_id": 134262171, 
+            "in_reply_to_user_id_str": "134262171", 
+            "lang": "es", 
+            "metadata": {
+                "iso_language_code": "es", 
+                "result_type": "recent"
+            }, 
+            "place": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "attributes": {}, 
+                "bounding_box": {
+                    "_api": {
+                        "py/id": 2
+                    }, 
+                    "coordinates": [
+                        [
+                            [
+                                -91.609772, 
+                                41.598563
+                            ], 
+                            [
+                                -91.463047, 
+                                41.598563
+                            ], 
+                            [
+                                -91.463047, 
+                                41.695543
+                            ], 
+                            [
+                                -91.609772, 
+                                41.695543
+                            ]
+                        ]
+                    ], 
+                    "py/object": "tweepy.models.BoundingBox", 
+                    "type": "Polygon"
+                }, 
+                "country": "United States", 
+                "country_code": "US", 
+                "full_name": "Iowa City, IA", 
+                "id": "15088320578e2418", 
+                "name": "Iowa City", 
+                "place_type": "city", 
+                "py/object": "tweepy.models.Place", 
+                "url": "https://api.twitter.com/1.1/geo/id/15088320578e2418.json"
+            }, 
+            "py/object": "tweepy.models.Status", 
+            "retweet_count": 0, 
+            "retweeted": false, 
+            "source": "Twitter for Android", 
+            "source_url": "http://twitter.com/download/android", 
+            "text": "@NolansMLIA #visitate #regurgitate #masturb8?", 
+            "truncated": false, 
+            "user": {
+                "py/id": 78
+            }
+        }, 
+        {
+            "_api": {
+                "py/id": 2
+            }, 
+            "author": {
+                "_api": {
+                    "py/id": 2
+                }, 
+                "contributors_enabled": false, 
+                "created_at": {
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        }, 
+                        [
+                            "B90CARIzJgAAAA=="
+                        ]
+                    ], 
+                    "py/object": "datetime.datetime"
+                }, 
+                "default_profile": true, 
+                "default_profile_image": false, 
+                "description": "Interning at http://t.co/YwmGtl3V3R! (WOW) Below average Beer Leaguer, Superstar Beer Drinker. These tweets are mine & don't rep the D-bags who hired me!", 
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "Hockeytube.net", 
+                                "expanded_url": "http://Hockeytube.net", 
+                                "indices": [
+                                    13, 
+                                    35
+                                ], 
+                                "url": "http://t.co/YwmGtl3V3R"
+                            }
+                        ]
+                    }, 
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "hockeytube.net", 
+                                "expanded_url": "http://hockeytube.net", 
+                                "indices": [
+                                    0, 
+                                    22
+                                ], 
+                                "url": "http://t.co/VGJ46E4pfk"
+                            }
+                        ]
+                    }
+                }, 
+                "favourites_count": 2138, 
+                "follow_request_sent": false, 
+                "followers_count": 453, 
+                "following": false, 
+                "friends_count": 485, 
+                "geo_enabled": false, 
+                "id": 1140465583, 
+                "id_str": "1140465583", 
+                "is_translator": false, 
+                "lang": "en", 
+                "listed_count": 4, 
+                "location": "My Nightmare", 
+                "name": "Drunk Intern Josh", 
+                "notifications": false, 
+                "profile_background_color": "C0DEED", 
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
+                "profile_background_tile": false, 
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/1140465583/1376605255", 
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000278058648/958aced694b1ea7751dba3b2163ecf09_normal.jpeg", 
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000278058648/958aced694b1ea7751dba3b2163ecf09_normal.jpeg", 
+                "profile_link_color": "0084B4", 
+                "profile_sidebar_border_color": "C0DEED", 
+                "profile_sidebar_fill_color": "DDEEF6", 
+                "profile_text_color": "333333", 
+                "profile_use_background_image": true, 
+                "protected": false, 
+                "py/object": "tweepy.models.User", 
+                "screen_name": "DrunkInternJosh", 
+                "statuses_count": 4735, 
+                "time_zone": null, 
+                "url": "http://t.co/VGJ46E4pfk", 
+                "utc_offset": null, 
+                "verified": false
+            }, 
+            "contributors": null, 
+            "coordinates": null, 
+            "created_at": {
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.datetime"
+                    }, 
+                    [
+                        "B90JBQ01EwAAAA=="
+                    ]
+                ], 
+                "py/object": "datetime.datetime"
+            }, 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            88, 
+                            100
+                        ], 
+                        "text": "regurgitate"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": []
+            }, 
+            "favorite_count": 0, 
+            "favorited": false, 
+            "geo": null, 
+            "id": 375617642196779008, 
+            "id_str": "375617642196779008", 
+            "in_reply_to_screen_name": null, 
+            "in_reply_to_status_id": null, 
+            "in_reply_to_status_id_str": null, 
+            "in_reply_to_user_id": null, 
+            "in_reply_to_user_id_str": null, 
+            "lang": "en", 
+            "metadata": {
+                "iso_language_code": "en", 
+                "result_type": "recent"
+            }, 
+            "place": null, 
+            "py/object": "tweepy.models.Status", 
+            "retweet_count": 0, 
+            "retweeted": false, 
+            "source": "Twitter for iPad", 
+            "source_url": "http://twitter.com/#!/download/ipad", 
+            "text": "Is it true when you hit 5,000 tweets...you get to release a greatest tweets collection? #regurgitate", 
+            "truncated": false, 
+            "user": {
+                "py/id": 103
+            }
+        }
+    ], 
+    "query": "%23regurgitate", 
+    "refresh_url": "?since_id=377925187519266817&q=%23regurgitate&include_entities=1"
+}
