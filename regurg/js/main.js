@@ -1,7 +1,15 @@
 d3 = require('d3');
 
-function loadTweets(cb) {
-
+function loadTweets(onData) {
+  d3.json("../data/example-tweets.json", function(error, data) {
+    if (error !== null) {
+      console.log("Error loading tweets: " + error);
+      return;
+    }
+    onData(data.tweets);
+  });
 }
 
-console.log("Hello world!");
+loadTweets(function(tweets) {
+  console.log(tweets);
+});

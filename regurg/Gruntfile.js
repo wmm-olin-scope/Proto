@@ -23,8 +23,8 @@ module.exports = function(grunt) {
               exports: '_'
             },
             d3: {
-              path: './libs/d3.v3.js',
-              exports: '_'
+              path: './libs/d3.v3.min.js',
+              exports: 'd3'
             },
           }
         },
@@ -36,12 +36,12 @@ module.exports = function(grunt) {
           alias: [
             './libs/jquery.js:jquery',
             './libs/underscore.js:underscore',
-            './libs/d3.v3.js:d3'
+            './libs/d3.v3.min.js:d3'
           ],
           external: [
             './libs/jquery.js',
             './libs/underscore.js',
-            './libs/d3.v3.js'
+            './libs/d3.v3.min.js'
           ]
         },
         src: ['js/main.js'],

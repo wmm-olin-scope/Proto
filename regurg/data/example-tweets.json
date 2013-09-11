@@ -1,0 +1,11 @@
+{
+  "tweets": [
+    {
+      "user": "wmmedu",
+      "tweet": "So much #regurgitate today!",
+      "location": {
+        "coordinates": [40, 180]
+      }
+    }
+  ]
+}
