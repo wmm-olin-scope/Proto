@@ -16,10 +16,19 @@ auth.set_access_token(access_token, access_token_secret)
  
 # Creation of the actual interface, using authentication
 api = tweepy.API(auth)
- 
-# Sample method, used to update a status
-data = api.search("#regurgitate")
 
-pickled = jsonpickle.encode(data)
+ct = 0
+tweets = []
+for tweet in tweepy.Cursor(api.search, q="#tcdisrupt", count=100, include_entities=True, lang="en").items():
+	print ct
+	tweets.append(tweet)
+	if ct > 100:
+		break
+	ct += 1
+
+# Sample method, used to update a status
+# data = api.search("#regurgitate")
+
+pickled = jsonpickle.encode(tweets)
 with open("raw-tweets.json", "w") as jsonfile:
 	jsonfile.write(json.dumps(json.loads(pickled), indent=4, sort_keys=True))
