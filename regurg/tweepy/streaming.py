@@ -2,13 +2,14 @@ import tweepy
 import json
 import jsonpickle
 from pprint import pprint
+import os
 
  
 # Consumer keys and access tokens, used for OAuth
-consumer_key = 'UX0aRz4tzXcWblxIEVw'
-consumer_secret = 'QkpBFpTiShmqdWq97Jylam5tB5MadBd4gMcEdNi99I'
-access_token = '596973714-NMVzVGYpN6aq6vSeM8Cu24tqC5pQT97TuzAppSEF'
-access_token_secret = 'LFiFeN4TsHPtkOeekurvrFaZogAkzgAFdkHu2kKxIM'
+consumer_key = os.getenv('consumer_key')
+consumer_secret = os.getenv('consumer_secret')
+access_token = os.getenv('access_token')
+access_token_secret = os.getenv('access_token_secret')
  
 # OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
