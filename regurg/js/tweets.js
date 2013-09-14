@@ -1,6 +1,8 @@
 
 _ = require('underscore');
 
+exports.tweetServerURL = "http://localhost:5000/"; //"http://scope-tweetserver.herokuapp.com/";
+
 function parseTweet(tweet) {
     return {user: {name: tweet.user.name,
                    screen_name: tweet.user.screen_name,
@@ -12,11 +14,10 @@ function parseTweet(tweet) {
             coordinates: tweet.coordinates};
 }
 
-exports.exampleTweets = "../data/tweets-1.json";
 
-exports.loadTweets = function(url, onData) {
-  d3.json(url, function(error, tweets) {
-    if (error !== null) {
+exports.loadTweets = function(onData) {
+  d3.json(exports.tweetServerURL, function(error, tweets) {
+    if (error !== null || tweets === null) {
       console.log("Error loading tweets: " + error);
       return;
     }

@@ -1,0 +1,32 @@
+h1 {
+    font-size: 2.4em;
+    font-family: Arial, sans-serif;
+    margin: 0.5em 0 0 0.5em;
+}
+
+.hash {
+    color: #999999;
+    font-style: italic;
+}
+
+.hashtag {
+    color: #257F9B;
+    font-style: italic;
+}
+
+.hashtag-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title-divide {
+    height: 1px;
+    border: 0;
+    /*background-color: 0;*/
+    margin-bottom: 2em;
+}
+
+.number {
+    color: #880000;
+    position: relative;
+}
