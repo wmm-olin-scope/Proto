@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<style>
+
+	.background {
+		fill: none;
+		pointer-events: all;
+	}
+
+	#states {
+		fill: #aaa;
+	}
+
+	#states .active {
+		fill: orange;
+	}
+
+	#state-borders {
+		fill: none;
+		stroke: #fff;
+		stroke-width: 1.5px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		pointer-events: none;
+	}
+
+</style>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">I Just Memorized A Fact</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">View Map &nbsp;<span class="glyphicon glyphicon-search"></a></li>
+      <li><a href="#">Submit Fact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">View Live Twitter Feed <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+<div class="row" style="padding-bottom: 15px">
+	<div class="col-md-9" id="map-box">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/topojson.v1.min.js"></script>
+		<script>
+
+			var width = 960,
+					height = 500,
+					centered;
+
+			var projection = d3.geo.albersUsa()
+					.scale(1070)
+					.translate([width / 2, height / 2]);
+
+			var path = d3.geo.path()
+					.projection(projection);
+
+			var svg = d3.select("#map-box").append("svg")
+					.attr("width", width)
+					.attr("height", height);
+
+			svg.append("rect")
+					.attr("class", "background")
+					.attr("width", width)
+					.attr("height", height)
+					.on("click", clicked);
+
+			var g = svg.append("g");
+
+			d3.json("us.json", function(error, us) {
+				g.append("g")
+						.attr("id", "states")
+					.selectAll("path")
+						.data(topojson.feature(us, us.objects.states).features)
+					.enter().append("path")
+						.attr("d", path)
+						.on("click", clicked);
+
+				g.append("path")
+						.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+						.attr("id", "state-borders")
+						.attr("d", path);
+			});
+
+			function clicked(d) {
+				var x, y, k;
+
+				if (d && centered !== d) {
+					var centroid = path.centroid(d);
+					x = centroid[0];
+					y = centroid[1];
+					k = 4;
+					centered = d;
+				} else {
+					x = width / 2;
+					y = height / 2;
+					k = 1;
+					centered = null;
+				}
+
+				g.selectAll("path")
+						.classed("active", centered && function(d) { return d === centered; });
+
+				g.transition()
+						.duration(750)
+						.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+						.style("stroke-width", 1.5 / k + "px");
+			}
+
+		</script>
+	</div>
+	<div class="col-md-3" style="padding-right: 40px">
+		<a class="twitter-timeline" href="https://twitter.com/search?q=%23regurgitate" data-widget-id="378956096913678336" height="500" width="300">Tweets about "#regurgitate"</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+</div>
+<div class="row" style="background-color: orange;">
+	<div class="col-md-4 col-md-offset-4">
+		<center>
+			<h2> <strong> 6,000 </strong> </h2>
+			<h4> Facts Memorized </h4>
+		</center>
+	</div>
+</div>
+</body>
