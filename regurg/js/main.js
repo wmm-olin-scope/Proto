@@ -22,5 +22,11 @@ document.onready = function() {
     setInterval(function() { tweetMap.addTweet({}); }, 700);
 
     var tweetScroller = new TweetScroller("#tweet-scroller", 10);
+    var i = 0;
+    setInterval(function() {
+        tweetScroller.addTweet({id_str: i.toString(),
+                                content: "This is tweet #" + i});
+        i += 1;
+    }, 200);
 };
 

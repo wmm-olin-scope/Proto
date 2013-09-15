@@ -54,4 +54,10 @@ h1 {
     width: 300;
     height: 700;
     float: right;
+    overflow-y: hidden;
+}
+
+div .tweet {
+    width: 100%;
+    position: relative;
 }
