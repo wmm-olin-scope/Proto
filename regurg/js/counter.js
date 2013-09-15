@@ -1,6 +1,5 @@
 
 d3 = require("d3");
-_ = require("underscore");
 
 exports.Counter = function Counter(selector, value) {
     this.selector = selector;
@@ -22,15 +21,15 @@ exports.Counter.prototype.update = function(value) {
 
     var spans = d3.select(this.selector).selectAll("span")
                   .data(digits, function(_, i) {
-                      console.log(digits.length - i - 1);
                       return digits.length - i - 1;
                   });
 
     spans.filter(function(digit, i) { return digit != oldDigits[i]; })
+         .style("top", 0)
          .transition().duration(duration)
          .style("opacity", 0)
          .style("top", -offset)
-         .transition().duration(10)
+         .transition().duration(duration/2)
          .text(function(digit) { return digit; })
          .style("top", offset)
          .transition().duration(duration)

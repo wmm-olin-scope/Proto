@@ -26,6 +26,10 @@ module.exports = function(grunt) {
               path: './libs/d3.v3.min.js',
               exports: 'd3'
             },
+            topojson: {
+              path: './libs/topojson.min.js',
+              exports: 'topojson'
+            }
           }
         },
         src: ['./libs/*.js'],
@@ -36,12 +40,14 @@ module.exports = function(grunt) {
           alias: [
             './libs/jquery.js:jquery',
             './libs/underscore.js:underscore',
-            './libs/d3.v3.min.js:d3'
+            './libs/d3.v3.min.js:d3',
+            './libs/topojson.min.js:topojson',
           ],
           external: [
             './libs/jquery.js',
             './libs/underscore.js',
-            './libs/d3.v3.min.js'
+            './libs/d3.v3.min.js',
+            './libs/topojson.min.js'
           ]
         },
         src: ['js/main.js'],
