@@ -30,14 +30,16 @@ exports.TweetMap.prototype.load = function() {
         }
 
         this_.mapData = mapData;
-
-        d3.tsv(this.densityURL, function(d) { 
-            this_.countyToDensity.set(d.id, +d.density);
-        }, function(error, _) {
+        d3.tsv(this_.densityURL, function(error, densities) {
             if (error !== null) {
                 console.log(error);
                 return;
             }
+
+            console.log(densities);
+            _.map(densities, function(d) {
+                this_.countyToDensity.set(d.id, +d.density);
+            });
 
             this_.render();
         });
@@ -51,37 +53,60 @@ exports.TweetMap.prototype.render = function() {
         function(a, b) { return a !== b; }
     );
 
+    var this_ = this;
     this.svg.append("g")
-            .classed("counties", true)
+            .classed("county", true)
             .selectAll("path")
             .data(this.counties.features)
             .enter().append("path")
             .attr("class", function(d) { 
-                return this.density(this.countyToDensity.get(d.id));
+                return this_.density(this_.countyToDensity.get(d.id));
             })
+            .attr("id", function(d) { return "county" + d.id; })
             .attr("d", this.path);
 
     this.svg.append("path")
             .datum(this.borders)
             .classed("states", true)
             .attr("d", this.path);
+
+    this.svg.append("g")
+            .attr("id", "lit-up-group");
 };
 
-exports.TweetMap.prototype.randomLocation = function() {
-    var index = Math.random()*this.states.features.length;
-    var centroid = d3.geo.centroid(this.states.features[index|0]);
-    return _.map(centroid, function(x) { return x + Math.random()*3 - 1.5; });
+exports.TweetMap.prototype.randomCounty = function() {
+    var keys = this.countyToDensity.keys();
+    return keys[(Math.random()*keys.length)|0];
 };
 
 exports.TweetMap.prototype.addTweet = function(tweet) {
-    var location = this.randomLocation();
-    var xy = this.projection(location);
+    var countyID = this.randomCounty();
+    var this_ = this;
 
-    var circle = this.svg.append("circle").datum(tweet)
-                         .classed("tweet-location", true)
-                         .attr("cx", xy[0])
-                         .attr("cy", xy[1])
-                         .attr("r", 15);
-    circle.transition().duration(500)
-          .attr("r", 1);
+    function makeTransform(feature, scale) {
+        var center = d3.geo.centroid(feature);
+        var xy = this_.projection(center);
+        var k = -(scale - 1);
+        return "translate(" + xy[0]*k + "," + xy[1]*k + ")" +
+               "scale(" + scale + ")";
+    }
+
+    this.svg.select("#county" + countyID).each(function(d) {
+        this_.svg.select("#lit-up-group")
+                .append("path")
+                .datum(d)
+                .classed("lit-up-county", true)
+                .attr("d", this_.path)
+
+                .attr("fill-opacity", 0.1)
+                .attr("transform", function(d) { return makeTransform(d, 1); })
+                .transition().duration(300)
+                .attr("fill-opacity", 1)
+                .attr("transform", function(d) { return makeTransform(d, 4); })
+                .transition().duration(700)
+                .transition().duration(300)
+                .attr("fill-opacity", 0.1)
+                .attr("transform", function(d) { return makeTransform(d, 1); })
+                .remove();
+    });
 };
