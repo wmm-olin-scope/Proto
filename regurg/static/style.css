@@ -19,6 +19,18 @@ h1 {
     cursor: pointer;
 }
 
+.fact_div {
+    color: #999999;
+    margin: 0.5em 0 0 0.9em;
+    font-family: Arial, sans-serif;
+}
+
+.approx {
+    color: #999999;
+    margin: 0.5em 0 0 0.9em;
+    font-family: Arial, sans-serif;
+}
+
 .title-divide {
     height: 1px;
     border: 0;
