@@ -25,8 +25,13 @@ document.onready = function() {
     var i = 0;
     setInterval(function() {
         tweetScroller.addTweet({id_str: i.toString(),
-                                content: "This is tweet #" + i});
+                                text: "This is tweet #" + i});
         i += 1;
     }, 200);
+
+    var tweetLoader = new twt.TweetLoader(function(tweets) {
+        //_.each(tweets, function(t) { tweetScroller.addTweet(t); });
+    });
+    tweetLoader.start();
 };
 

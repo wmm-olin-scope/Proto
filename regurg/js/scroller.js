@@ -45,7 +45,7 @@ exports.TweetScroller.prototype.redraw = function() {
     divs.enter()
             .append("div")
             .classed("tweet", true)
-            .text(function(t) { return t.content; })
+            .text(function(t) { return t.text; })
             .style("top", function(_, i) {
                 return this_.y(Math.max(i + 1, this_.numToShow));
             })
