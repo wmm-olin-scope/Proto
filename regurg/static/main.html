@@ -4,10 +4,12 @@
         <link href="style.css" media="all" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="../deploy/libs.js"></script>
         <script type="text/javascript" src="../deploy/main.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     </head>
     <body>
+        <div class="row">
         <h1>
-            <span class="number" id="regurgitated-today"></span> 
+            <span class="number" id="regurgitated-today" style="padding-left: 20px;"></span> 
             facts
             <span class="hash">#</span><a class="hashtag-link"><span class="hashtag">regurgitated</span></a>
             today
@@ -16,8 +18,17 @@
             <span class="approx">&asymp;</span>
             <span class="fact_div"></span>
         </h2>
+        </div>
         <hr class="title-divide"/>
         <svg id="tweet-map" width="800" height="700"></svg>
         <div id="tweet-scroller" width="300" height="700"></div>
+        <nav class="navbar navbar-default navbar-fixed-bottom navbar-inverse" style="padding-left:40%">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control input-xxlarge" placeholder="What'd I #regurgitate?">
+              </div>
+              <button type="submit" class="btn btn-default navbar-btn">Submit</button>
+            </form>
+        </nav>
     </body>
 </html>
