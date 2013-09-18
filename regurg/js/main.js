@@ -5,6 +5,7 @@ twt = require('./tweets');
 Counter = require('./counter').Counter;
 TweetMap = require('./map').TweetMap;
 TweetScroller = require('./scroller').TweetScroller;
+FactDisplay = require('./factdisplay').FactDisplay;
 
 /*
 twt.loadTweets(twt.exampleTweets, function (tweets) {
