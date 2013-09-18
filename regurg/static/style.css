@@ -43,8 +43,10 @@ h1 {
     position: relative;
 }
 
-.counties {
+.county {
   fill: none;
+  stroke: #fff;
+  stroke-width: 0;
 }
 
 .states {
@@ -63,6 +65,9 @@ h1 {
 .q7-9 { fill:rgb(8,81,156); }
 .q8-9 { fill:rgb(8,48,107); }
 
+.lit-up-county {
+    fill: #ff0000;
+}
 
 .tweet-location {
     stroke: #257F9B;

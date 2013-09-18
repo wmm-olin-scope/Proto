@@ -30,9 +30,9 @@ document.onready = function() {
         i += 1;
     }, 200);
 
-    var tweetLoader = new twt.TweetLoader(function(tweets) {
-        //_.each(tweets, function(t) { tweetScroller.addTweet(t); });
-    });
-    tweetLoader.start();
+    //var tweetLoader = new twt.TweetLoader(function(tweets) {
+       //_.each(tweets, function(t) { tweetScroller.addTweet(t); });
+    //});
+    //tweetLoader.start();
 };
 
