@@ -1,26 +1,32 @@
 d3 = require("d3");
 
-exports.Facts = function Facts(selector, text) {
+exports.FactDisplay = function Facts(selector, text) {
     this.selector = selector;
-    this.text = '';
-    this.update(text);
+    this.node = d3.select(selector);
 };
 
-exports.Facts.prototype.update = function() {
-	var facts = ["Digits of Pi memorized",
-        "Most digits memorised in 2 seconds",
-        "Most binary digits memorised in 3 seconds",
-        "Most binary digits memorised in 1 minute",
-        "Most binary digits memorised in 5 minutes",
-        "Most spoken numbers (spoken at a rate of 1 digit every second)",
-        "Most written numbers memorized in 1 minute",
-        "Most words memorized in 15 minutes",
-        "Most cards memorized",
-        "Speed record of a single pack of cards",
-        "Record for the number of names and faces memorized in 15 minutes",
-        "Record for the number of historic dates memorized",
-        "Record for the number of abstract images memorized"
-        ]
-    var currentFact = facts[int(Math.random()*facts.length)];
-    return currentFact
-}
+exports.FactDisplay.prototype.update = function() {
+	var facts = ["number of digits of pi memorized",
+        "most digits memorised in 2 seconds",
+        "most binary digits memorised in 3 seconds",
+        "most binary digits memorised in 1 minute",
+        "most binary digits memorised in 5 minutes",
+        "most spoken numbers",
+        "most written numbers memorized in 1 minute",
+        "most words memorized in 15 minutes",
+        "most cards memorized",
+        "number of names and faces memorized in 15 minutes",
+        "number of historic dates memorized",
+        "number of abstract images memorized"
+        ];
+    var currentFact = facts[(Math.random()*facts.length)|0];
+    string = "That's more than the record for the " + currentFact + "!";
+
+    this.node.style("opacity", 1)
+        .transition().duration(500)
+        .style("opacity", 0)
+        .transition().duration(10)
+        .text(string)
+        .transition().duration(500)
+        .style("opacity", 1);
+};

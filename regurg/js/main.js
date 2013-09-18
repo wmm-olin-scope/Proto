@@ -5,7 +5,7 @@ twt = require('./tweets');
 Counter = require('./counter').Counter;
 TweetMap = require('./map').TweetMap;
 TweetScroller = require('./scroller').TweetScroller;
-FactDisplay = require('./factdisplay').FactDisplay;
+FactDisplay = require('./facts').FactDisplay;
 
 /*
 twt.loadTweets(twt.exampleTweets, function (tweets) {
@@ -17,12 +17,15 @@ twt.loadTweets(twt.exampleTweets, function (tweets) {
 document.onready = function() {
     var tweetMap = new TweetMap("#tweet-map"); tweetMap.load();
     var factsToday = new Counter("#regurgitated-today", 985);
-    var tweetScroller = new TweetScroller("#tweet-scroller", 8);
+    var tweetScroller = new TweetScroller("#tweet-scroller", 6);
+    var factDisplay = new FactDisplay("#magnitude"); factDisplay.update();
 
     setInterval(function() {
         var newTweets = 1 + (Math.random()*Math.random()*2)|0;
         factsToday.update(factsToday.value + newTweets);
         for (var i = 0; i < newTweets; i++) tweetMap.addTweet();
+
+        if (Math.random() < 0.05) factDisplay.update();
     }, 1000);
 
     var tweetLoader = new twt.FakeTweetLoader(function(tweets) {

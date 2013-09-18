@@ -2,7 +2,7 @@
 d3 = require("d3");
 _ = require("underscore");
 
-var tweetHeight = 50;
+var tweetHeight = 35;
 var duration = 500;
 
 exports.TweetScroller = function TweetScroller(selector, numToShow) {
