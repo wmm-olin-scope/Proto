@@ -1,3 +1,5 @@
+body { padding-bottom: 70px; }
+
 h1 {
     font-size: 2.4em;
     font-family: Arial, sans-serif;
@@ -17,6 +19,18 @@ h1 {
 .hashtag-link {
     text-decoration: none;
     cursor: pointer;
+}
+
+.fact_div {
+    color: #999999;
+    margin: 0.5em 0 0 0.9em;
+    font-family: Arial, sans-serif;
+}
+
+.approx {
+    color: #999999;
+    margin: 0.5em 0 0 0.9em;
+    font-family: Arial, sans-serif;
 }
 
 .title-divide {
