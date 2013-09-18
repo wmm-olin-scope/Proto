@@ -6,7 +6,7 @@ _ = require("underscore");
 exports.TweetMap = function TweetMap(selector) {
     this.selector = selector;
     this.mapDataURL = "../data/us-map.json";
-    this.densityURL = "../data/density.tsv"
+    this.densityURL = "../data/density.tsv";
 
     this.svg = d3.select(selector);
     this.size = [this.svg.attr("width"), this.svg.attr("height")];
@@ -18,7 +18,7 @@ exports.TweetMap = function TweetMap(selector) {
     this.countyToDensity = d3.map();
     this.density = d3.scale.quantize()
             .domain([0, 0.15])
-            .range(d3.range(9).map(function(n) { return "q" + i + "-9"; });
+            .range(d3.range(9).map(function(n) { return "q" + n + "-9"; }));
 };
 
 exports.TweetMap.prototype.load = function() {
@@ -42,6 +42,7 @@ exports.TweetMap.prototype.load = function() {
             this_.render();
         });
     });
+};
 
 exports.TweetMap.prototype.render = function() {
     this.counties = topojson.feature(this.mapData, 
@@ -55,16 +56,15 @@ exports.TweetMap.prototype.render = function() {
             .selectAll("path")
             .data(this.counties.features)
             .enter().append("path")
-            .attr("class", function(d) { return this.})
-    this_.svg.append("g").attr("id", "states")
-             .selectAll("path")
-             .data(this_.states.features)
-             .enter().append("path")
-             .attr("d", this_.path);
+            .attr("class", function(d) { 
+                return this.density(this.countyToDensity.get(d.id));
+            })
+            .attr("d", this.path);
 
-    this_.svg.append("path").attr("id", "state-borders")
-             .datum(this_.borders)
-             .attr("d", this_.path);
+    this.svg.append("path")
+            .datum(this.borders)
+            .classed("states", true)
+            .attr("d", this.path);
 };
 
 exports.TweetMap.prototype.randomLocation = function() {
