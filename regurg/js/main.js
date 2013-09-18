@@ -14,24 +14,19 @@ twt.loadTweets(twt.exampleTweets, function (tweets) {
 });*/
 
 document.onready = function() {
+    var tweetMap = new TweetMap("#tweet-map"); tweetMap.load();
     var factsToday = new Counter("#regurgitated-today", 985);
-    setInterval(function() { factsToday.update(factsToday.value + (Math.random()*4)|0); }, 1000);
+    var tweetScroller = new TweetScroller("#tweet-scroller", 8);
 
-    var tweetMap = new TweetMap("#tweet-map");
-    tweetMap.load();
-    setInterval(function() { tweetMap.addTweet({}); }, 700);
-
-    var tweetScroller = new TweetScroller("#tweet-scroller", 10);
-    var i = 0;
     setInterval(function() {
-        tweetScroller.addTweet({id_str: i.toString(),
-                                text: "This is tweet #" + i});
-        i += 1;
-    }, 200);
+        var newTweets = 1 + (Math.random()*Math.random()*2)|0;
+        factsToday.update(factsToday.value + newTweets);
+        for (var i = 0; i < newTweets; i++) tweetMap.addTweet();
+    }, 1000);
 
-    //var tweetLoader = new twt.TweetLoader(function(tweets) {
-       //_.each(tweets, function(t) { tweetScroller.addTweet(t); });
-    //});
-    //tweetLoader.start();
+    var tweetLoader = new twt.FakeTweetLoader(function(tweets) {
+        _.each(tweets, function(t) { tweetScroller.addTweet(t); });
+    }, 2000);
+    tweetLoader.start();
 };
 

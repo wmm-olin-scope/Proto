@@ -54,7 +54,7 @@ h1 {
 .q8-9 { fill:rgb(8,48,107); }
 
 .lit-up-county {
-    fill: #ff0000;
+    fill: #880000;
 }
 
 .tweet-location {
@@ -63,14 +63,20 @@ h1 {
     fill: none;
 }
 
+#tweet-map {
+    float: left;
+}
+
 #tweet-scroller {
-    width: 300;
+    width: 400;
     height: 700;
-    float: right;
+    float: left;
     overflow-y: hidden;
 }
 
 div .tweet {
     width: 100%;
     position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 0.8em;
 }

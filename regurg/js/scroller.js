@@ -36,6 +36,19 @@ exports.TweetScroller.prototype.doUpdate = function() {
     this.redraw();
 };
 
+function highlightHashtags(text) {
+    var hashtagRegex = /#([a-zA-Z0-9]+)/g;
+
+    var match = hashtagRegex.exec(text);
+    while (match !== null) {
+        var hash = '<span class="hash">#</span>';
+        var tag = '<span class="hashtag">' + match[1] + '</span>';
+        text = text.replace(match[0], hash + tag);
+        match = hashtagRegex.exec(text);
+    }
+    return text;
+}
+
 exports.TweetScroller.prototype.redraw = function() {
     var divs = this.div.selectAll("div.tweet").data(this.tweets, 
         function(tweet) { return tweet.id_str; }
@@ -45,7 +58,7 @@ exports.TweetScroller.prototype.redraw = function() {
     divs.enter()
             .append("div")
             .classed("tweet", true)
-            .text(function(t) { return t.text; })
+            .html(function(t) { return highlightHashtags(t.text); })
             .style("top", function(_, i) {
                 return this_.y(Math.max(i + 1, this_.numToShow));
             })
